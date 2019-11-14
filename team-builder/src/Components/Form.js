@@ -8,7 +8,7 @@ const TeamMemeber = props => {
     })
 
     const changeHandler = e => {
-        setMemeber({...memeber, [event.target.name]: event.target.value})
+        setMemeber({...memeber, [e.target.name]: e.target.value})
     }
 
     const submitForm = e =>{
