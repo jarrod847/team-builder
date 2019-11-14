@@ -6,4 +6,14 @@ const TeamMemeber = props => {
         email:"",
         role:""
     })
+    
+    const changeHandler = e => {
+        setMemeber({...memeber, [event.target.name]: event.target.value})
+    }
+
+    return(
+        <Form></Form>
+    )
 }
+
+export default TeamMemeber

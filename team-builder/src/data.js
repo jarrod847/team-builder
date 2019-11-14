@@ -1,3 +1,4 @@
+export default
 [
     {
         name:"Jarrod",
@@ -5,3 +6,4 @@
         role: "Front End"
     }
 ]
+
