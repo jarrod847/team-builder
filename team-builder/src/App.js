@@ -5,18 +5,29 @@ import TeamMemeber from './Components/Form';
 import People from './Components/TeamMember';
 
 function App() {
-  const [team, setTeam] = useState(data)
+  const [members, setMembers] = useState([
+    { id: 1,
+      name:"Jarrod",
+    email:"Jarrodskahill@gmail.com",
+    role: "Front End"}
+  ])
 
-  const addNewMember = Member => {
-    setTeam([...team, Member])
-  }
 
+ const addNewMember = memeber => {
+   const newMember = {
+     id: Date.now(),
+     name: memeber.name,
+     email: memeber.email,
+     role: memeber.role
+   }
+   setMembers([...members, newMember])
+ }
 
   return (
     <div className="App">
       <h1>Team Builder</h1>
       <TeamMemeber addNewMember={addNewMember}/>
-      <People person={team}/>
+      <People person={members}/>
     </div>
   );
 }

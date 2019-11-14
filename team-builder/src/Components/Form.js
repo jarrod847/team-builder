@@ -14,17 +14,17 @@ const TeamMemeber = props => {
     const submitForm = e =>{
         e.preventDefault();
         props.addNewMember(memeber);
-        setMemeber({name:"", email:"", role:""})
+
     }
 
     return(
         <form onSubmit={submitForm}>
             <label htmlFor="name">Name</label>
-            <input id="name" placeholder="Name" onChange={changeHandler} value={memeber.name} />
+            <input id="name" placeholder="Name" type="text" name="name"  onChange={changeHandler} value={memeber.name} />
             <label htmlFor="email">Email</label>
-            <input id="email" placeholder="Email" onChange={changeHandler} value={memeber.email} />
+            <input id="email" placeholder="Email" type="text" name="email"  onChange={changeHandler} value={memeber.email} />
             <label htmlFor="role">Role</label>
-            <input id="role" placeholder="Role" onChange={changeHandler} value={memeber.role}/>
+            <input id="role" placeholder="Role" type="text" name="role" onChange={changeHandler} value={memeber.role}/>
             <button type="submit">Submit</button>
         </form>
     )
