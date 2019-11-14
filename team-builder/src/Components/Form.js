@@ -6,13 +6,18 @@ const TeamMemeber = props => {
         email:"",
         role:""
     })
-    
+
     const changeHandler = e => {
         setMemeber({...memeber, [event.target.name]: event.target.value})
     }
 
     return(
-        <Form></Form>
+        <form>
+            <label htmlFor="name">Name</label>
+            <input id="name" placeholder="Name" onChange={changeHandler} value={memeber.name} />
+            <label htmlFor="email">Email</label>
+            <input id="email" placeholder="Email" onChange={changeHandler} value={memeber.email} />
+        </form>
     )
 }
 

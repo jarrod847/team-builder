@@ -8,7 +8,8 @@ function App() {
   const addNewMember = Member => {
     setTeam([...team, Member])
   }
-  
+
+
   return (
     <div className="App">
       <h1>Team Builder</h1>
